@@ -1,3 +1,6 @@
+//3rd party packages
+import { Link } from 'react-router-dom';
+
 //components
 import SharedButton from '../shared/shared-button/SharedButton';
 import SharedInput from '../shared/shared-input/SharedInput';
@@ -16,6 +19,9 @@ const LoginForm = () => {
           Login
         </SharedButton>
       </div>
+      <p className={styles.text}>
+        Not registered? Register <Link to={'/register'}>here</Link>
+      </p>
     </form>
   );
 };
