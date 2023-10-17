@@ -1,1 +1,22 @@
+@import '../../SassVariables.scss';
 
+.error {
+  background-color: $danger;
+}
+
+.notification_container {
+  border-radius: 5px;
+  left: 0;
+  padding: 0.5rem;
+  position: absolute;
+  top: 40px;
+  z-index: 1;
+
+  .status {
+    font-size: 20px;
+  }
+}
+
+.success {
+  background-color: $success;
+}
