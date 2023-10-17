@@ -5,7 +5,6 @@
   background-color: $secondary;
   color: $primary;
   display: flex;
-  height: 56px;
   justify-content: space-between;
   padding: 0.5rem;
   position: relative;
@@ -24,7 +23,6 @@
   .link_list {
     background-color: $secondary;
     position: absolute;
-    padding: 0.5rem;
     right: 0;
     top: 35px;
   }
