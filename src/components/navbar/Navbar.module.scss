@@ -1,9 +1,11 @@
 @import '../../SassVariables.scss';
 
 .navbar_container {
+  align-items: center;
   background-color: $secondary;
   color: $primary;
   display: flex;
+  height: 56px;
   justify-content: space-between;
   padding: 0.5rem;
   position: relative;
