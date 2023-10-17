@@ -2,10 +2,16 @@
 
 .full_width {
   justify-content: center;
+  width: 100%;
 }
 
 .nav_button {
   background-color: $secondary;
   border: none;
   color: $primary;
+}
+
+.success_button {
+  background-color: $success;
+  border: 1px solid $secondary;
 }
