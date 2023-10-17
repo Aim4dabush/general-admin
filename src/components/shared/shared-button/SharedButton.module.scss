@@ -1,0 +1,11 @@
+@import '../../../SassVariables.scss';
+
+.full_width {
+  justify-content: center;
+}
+
+.nav_button {
+  background-color: $secondary;
+  border: none;
+  color: $primary;
+}
