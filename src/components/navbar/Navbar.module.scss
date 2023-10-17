@@ -12,11 +12,23 @@
     color: $primary;
   }
 
+  .close {
+    transform: translateX(100%);
+    transform-origin: left;
+    transition: transform 500ms ease-out;
+  }
+
   .link_list {
     background-color: $secondary;
     position: absolute;
     padding: 0.5rem;
     right: 0;
     top: 35px;
+  }
+
+  .open {
+    transform: translateX(0);
+    transform-origin: left;
+    transition: transform 500ms ease-in;
   }
 }

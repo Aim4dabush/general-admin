@@ -23,6 +23,10 @@ import styles from './Navbar.module.scss';
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
+  const menuHandler = () => {
+    setOpenMenu((prev) => !prev);
+  };
+
   return (
     <div className={styles.navbar_container}>
       <Link to={'/'}>
