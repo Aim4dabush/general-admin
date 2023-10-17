@@ -23,3 +23,27 @@
     display: flex;
   }
 }
+
+@media (min-width: 540px) {
+  .login_form {
+    width: 65%;
+  }
+}
+
+@media (min-width: 768px) {
+  .login_form {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .login_form {
+    width: 35%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .login_form {
+    width: 25%;
+  }
+}
