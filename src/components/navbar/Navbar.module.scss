@@ -1,0 +1,22 @@
+@import '../../SassVariables.scss';
+
+.navbar_container {
+  background-color: $secondary;
+  color: $primary;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  position: relative;
+
+  .brand {
+    color: $primary;
+  }
+
+  .link_list {
+    background-color: $secondary;
+    position: absolute;
+    padding: 0.5rem;
+    right: 0;
+    top: 35px;
+  }
+}
