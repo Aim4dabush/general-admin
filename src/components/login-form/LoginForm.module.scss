@@ -1,0 +1,19 @@
+@import '../../SassVariables.scss';
+
+.login_form {
+  border: 2px solid $secondary;
+  border-radius: 5px;
+  box-shadow: 4px 4px 6px $secondary;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  row-gap: 0.5rem;
+
+  .button_wrapper {
+    margin-top: 0.5rem;
+  }
+
+  .login_title {
+    text-align: center;
+  }
+}
