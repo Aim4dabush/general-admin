@@ -5,15 +5,18 @@ import { useSelector } from 'react-redux';
 import styles from './NotificationLayout.module.scss';
 
 const NotificationLayout = () => {
-  const { notification } = useSelector((state) => state.notification);
+  const { notification, showNotification } = useSelector(
+    (state) => state.notification
+  );
   const errorStyle = notification.status === 'error' && styles.error;
+  const showModal = showNotification ? styles.open : styles.close;
   const successStyle = notification.status === 'success' && styles.success;
   return (
     <div
-      className={`${errorStyle} ${styles.notification_container} ${successStyle}`}
+      className={`${errorStyle} ${styles.notification_container} ${showModal} ${successStyle}`}
     >
-      <h3 className={styles.status}></h3>
-      <p></p>
+      <h3 className={styles.status}>{notification.status}</h3>
+      <p>{notification.message}</p>
     </div>
   );
 };

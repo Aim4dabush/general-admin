@@ -1,5 +1,11 @@
 @import '../../SassVariables.scss';
 
+.close {
+  transform: translate(-100%);
+  transform-origin: right;
+  transition: transform 500ms ease-out;
+}
+
 .error {
   background-color: $danger;
 }
@@ -7,7 +13,7 @@
 .notification_container {
   border-radius: 5px;
   left: 0;
-  padding: 0.5rem;
+  padding: 0.25rem;
   position: absolute;
   top: 40px;
   z-index: 1;
@@ -15,6 +21,12 @@
   .status {
     font-size: 20px;
   }
+}
+
+.open {
+  transform: translate(0);
+  transform-origin: right;
+  transition: transform 500ms ease-in;
 }
 
 .success {
