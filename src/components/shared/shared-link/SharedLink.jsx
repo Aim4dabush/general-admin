@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom';
 //styles
 import styles from './SharedLink.module.scss';
 
-const SharedLink = ({ children, navbar, path }) => {
+const SharedLink = ({ children, path }) => {
   return (
-    <li className={styles.link_wrapper}>
+    <li>
       <NavLink
         className={({ isActive }) =>
           isActive ? styles.active : styles.not_active
