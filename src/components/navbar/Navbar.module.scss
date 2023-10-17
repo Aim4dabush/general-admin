@@ -7,6 +7,7 @@
   justify-content: space-between;
   padding: 0.5rem;
   position: relative;
+  width: 100%;
 
   .brand {
     color: $primary;
@@ -30,5 +31,20 @@
     transform: translateX(0);
     transform-origin: left;
     transition: transform 500ms ease-in;
+  }
+}
+
+@media (min-width: 540px) {
+  .navbar_container {
+    .button_wrapper {
+      display: none;
+    }
+
+    .link_list {
+      column-gap: 2rem;
+      display: flex;
+      position: initial;
+      transform: translateX(0);
+    }
   }
 }
