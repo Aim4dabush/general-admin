@@ -3,6 +3,9 @@ import { useEffect } from 'react';
 //3rd party packages
 import { useDispatch } from 'react-redux';
 
+//components
+import ProductsCard from '../../components/products/products-card/ProductsCard';
+
 //services
 import { getProducts } from '../../services/products-service';
 
@@ -16,7 +19,11 @@ const ProductsPage = () => {
     dispatch(getProducts());
   }, [dispatch]);
 
-  return <section>ProductsPage</section>;
+  return (
+    <section>
+      <ProductsCard />
+    </section>
+  );
 };
 
 export default ProductsPage;
