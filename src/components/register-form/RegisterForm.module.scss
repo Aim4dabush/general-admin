@@ -24,3 +24,30 @@
     text-align: center;
   }
 }
+
+@media (min-width: 540px) {
+  .register_form {
+    .content {
+      column-gap: 0.25rem;
+      flex-direction: row;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .register_form {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .register_form {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .register_form {
+    width: 25%;
+  }
+}
