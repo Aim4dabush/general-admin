@@ -1,4 +1,5 @@
 //3rd party packages
+import { useSelector } from 'react-redux';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 //components
@@ -18,6 +19,8 @@ import ShoppingCartPage from '../pages/shopping-cart-page/ShoppingCartPage';
 import WishListPage from '../pages/wish-list-page/WishListPage';
 
 const AppRoutes = () => {
+  const { auth } = useSelector((state) => state.user);
+
   return (
     <Routes>
       <Route element={<App />} path="/">
@@ -29,19 +32,23 @@ const AppRoutes = () => {
           <Route element={<ProductDetailsPage />} path=":productId" />
         </Route>
 
-        <Route path="profile">
-          <Route index element={<ProfilePage />} />
-          <Route path="orders">
-            <Route index element={<OrdersPage />} />
-            <Route element={<OrderDetailsPage />} path=":orderId" />
+        {auth.token && (
+          <Route path="profile">
+            <Route index element={<ProfilePage />} />
+            <Route path="orders">
+              <Route index element={<OrdersPage />} />
+              <Route element={<OrderDetailsPage />} path=":orderId" />
+            </Route>
+            <Route element={<WishListPage />} path="wish-list" />
           </Route>
-          <Route element={<WishListPage />} path="wish-list" />
-        </Route>
+        )}
 
-        <Route element={<CheckoutPage />} path="checkout" />
+        {auth.token && <Route element={<CheckoutPage />} path="checkout" />}
         <Route element={<LoginPage />} path="login" />
         <Route element={<RegisterPage />} path="register" />
-        <Route element={<ShoppingCartPage />} path="shopping-cart" />
+        {auth.token && (
+          <Route element={<ShoppingCartPage />} path="shopping-cart" />
+        )}
       </Route>
     </Routes>
   );
