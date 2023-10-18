@@ -5,6 +5,13 @@
   width: 100%;
 }
 
+.logout_button {
+  background-color: $secondary;
+  border: none;
+  color: $primary;
+  padding: 0;
+}
+
 .nav_button {
   background-color: $secondary;
   border: none;
