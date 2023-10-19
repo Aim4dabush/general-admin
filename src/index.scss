@@ -12,6 +12,11 @@ a {
   column-gap: 0.25rem;
   display: flex;
   text-decoration: none;
+
+  &:hover {
+    color: $success;
+    text-decoration: underline;
+  }
 }
 
 body {
