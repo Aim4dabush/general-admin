@@ -9,7 +9,7 @@ const ProductsCard = () => {
   const { products } = useSelector((state) => state.products);
 
   return (
-    <>
+    <div className={styles.card_container}>
       {products.length > 0 &&
         products.map((product) => {
           return (
@@ -39,7 +39,7 @@ const ProductsCard = () => {
             </Link>
           );
         })}
-    </>
+    </div>
   );
 };
 
