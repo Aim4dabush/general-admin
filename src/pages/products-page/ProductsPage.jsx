@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 //components
+import Pagination from '../../components/products/pagination/Pagination';
 import ProductsCard from '../../components/products/products-card/ProductsCard';
 
 //services
@@ -21,6 +22,7 @@ const ProductsPage = () => {
 
   return (
     <section className={styles.page_container}>
+      <Pagination />
       <ProductsCard />
     </section>
   );
