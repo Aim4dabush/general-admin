@@ -20,7 +20,7 @@ const ProductsPage = () => {
   }, [dispatch]);
 
   return (
-    <section>
+    <section className={styles.page_container}>
       <ProductsCard />
     </section>
   );
