@@ -6,9 +6,4 @@
 
 .not_active {
   color: $primary;
-
-  &:hover {
-    color: $success;
-    text-decoration: underline;
-  }
 }
