@@ -61,7 +61,7 @@ const Navbar = () => {
         )}
         {auth.token ? (
           <li>
-            <SharedButton logoutButton={true} clickHandler={signOutHandler}>
+            <SharedButton navButton={true} clickHandler={signOutHandler}>
               <FaSignOutAlt /> Logout
             </SharedButton>
           </li>
